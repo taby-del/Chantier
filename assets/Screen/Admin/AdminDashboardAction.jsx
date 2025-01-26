@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text } from 'react-native'
 
 function AdminDashboardAction() {
   return (
    <View>
-    <Text>Hello</Text>
+    <Text className="font-extrabold">Hello</Text>
    </View>
   )
 }
