@@ -32,15 +32,16 @@ function RootStack() {
     <Stack.Navigator
       initialRouteName="AdminDashboardAction"
       screenOptions={({ navigation }) => ({
-        headerStyle: { backgroundColor: "#7ddd7d" },
-        headerTitleStyle: { fontSize: 18, fontWeight: '900', color: "black" },
+        headerStyle: {
+          backgroundColor: "#7ddd7d",
+        },
+        headerTitleStyle: { fontSize: 20, fontWeight: '900', color: "white", },
         headerTitleAlign: "center",
-
         headerLeft: () => (
           <AntDesign
-          class
             name="arrowleft"
             size={20}
+            color="white"
             onPress={() => navigation.goBack()}
           />
         ),
@@ -63,7 +64,7 @@ function RootStack() {
       <Stack.Screen
         name="AdminDashboardAction"
         component={AdminDashboardAction}
-        options={{ headerTitle: 'Admin Dashboard' }}
+        options={{ headerTitle: "" }}
       />
       <Stack.Screen
         name="AdminDashboardAdd"
