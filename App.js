@@ -10,7 +10,6 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 //
 import AdminDashboardAction from './assets/Screen/Admin/AdminDashboardAction'
 import Home from './assets/Screen/Home';
-import AdminDashboardActionSelect from "./assets/Screen/Admin/AdminDashboardActionSelect"
 import AdminDashboardAdd from './assets/Screen/Admin/AdminDashboardAdd';
 import AdminDashboardAddDeleteEdit from './assets/Screen/Admin/AdminDashboardAddDeleteEdit';
 import AdminDashboardAddView from './assets/Screen/Admin/AdminDashboardAddView';
@@ -30,7 +29,7 @@ const Drawer = createDrawerNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="AdminDashboardAction"
+      initialRouteName="Home"
       screenOptions={({ navigation }) => ({
         headerStyle: {
           backgroundColor: "#7ddd7d",
@@ -58,7 +57,9 @@ function RootStack() {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ headerTitle: 'Home' }}
+        options={{ headerTitle: '', headerShown: false}}
+       
+        
       />
 
       <Stack.Screen
@@ -121,12 +122,7 @@ function RootStack() {
         component={AdminDashboardAddView}
         options={{ headerTitle: 'Admin Dashboard Add View' }}
       />
-      <Stack.Screen
-        name="AdminDashboardActionSelect"
-        component={AdminDashboardActionSelect}
-        options={{ headerTitle: 'Admin Dashboard Select' }}
-      />
-
+      
     </Stack.Navigator>
   );
 }

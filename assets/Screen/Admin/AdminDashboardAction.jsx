@@ -6,8 +6,8 @@ function AdminDashboardAction() {
   return (
     <View>
       <Text className="font-bold text-gray-500 text-xl py-4 text-center">Manage Supervisor</Text>
-      <View className="flex flex-row items-center space-x-4">
-        <Text className="text-gray-500 text-sm">Actions</Text>
+      <View className="flex flex-row items-center ml-6">
+        <Text className="text-gray-500 font-medium">Actions</Text>
         <Entypo className=" ml-2" name="chevron-down" size={20} color="gray" />
       </View>
     </View>
