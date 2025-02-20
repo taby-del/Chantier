@@ -21,6 +21,7 @@ import AdminDashboardReportWeek from './assets/Screen/Admin/AdminDashboardReport
 import AdminDashboardTask from './assets/Screen/Admin/AdminDashboardTask';
 import AdminDashboardTaskselect from './assets/Screen/Admin/AdminDashboardTaskselect';
 import AdminDashboardTaskView from './assets/Screen/Admin/AdminDashboardTaskView';
+import LoginForm from './assets/Screen/LoginForm'
 //
 
 const Stack = createNativeStackNavigator();
@@ -29,7 +30,7 @@ const Drawer = createDrawerNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="LoginForm"
       screenOptions={({ navigation }) => ({
         headerStyle: {
           backgroundColor: "#7ddd7d",
@@ -66,6 +67,11 @@ function RootStack() {
         name="AdminDashboardAction"
         component={AdminDashboardAction}
         options={{ headerTitle: "" }}
+      />
+      <Stack.Screen
+        name="LoginForm"
+        component={LoginForm}
+        options={{ headerTitle: "Sign-in/Sign-up"}}
       />
       <Stack.Screen
         name="AdminDashboardAdd"

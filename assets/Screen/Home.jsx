@@ -8,7 +8,7 @@ function Home() {
   const images = require("../Images/images__1_-removebg-preview.png")
   return (
     <View className="flex-1 bg-customGreen items-center justify-center">
-      <Image className="w-20 h-20 rounded-full" source={images} />
+      <Image className="w-20 h-20 rounded-full bg-blue-300 mb-4" source={images} />
       <Text className="font-extrabold text-xl">BUILDWISE</Text>
       <Text className="font-semibold">Welcome to BuildWise a simplified </Text>
       <Text className="font-semibold"> Smart Construction </Text>
