@@ -22,6 +22,7 @@ import AdminDashboardTask from './assets/Screen/Admin/AdminDashboardTask';
 import AdminDashboardTaskselect from './assets/Screen/Admin/AdminDashboardTaskselect';
 import AdminDashboardTaskView from './assets/Screen/Admin/AdminDashboardTaskView';
 import LoginForm from './assets/Screen/LoginForm'
+import ResetPassword from "./assets/Screen/ResetPassword";
 //
 
 const Stack = createNativeStackNavigator();
@@ -30,7 +31,7 @@ const Drawer = createDrawerNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="LoginForm"
+      initialRouteName="AdminDashboardReportWeek"
       screenOptions={({ navigation }) => ({
         headerStyle: {
           backgroundColor: "#7ddd7d",
@@ -58,9 +59,9 @@ function RootStack() {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ headerTitle: '', headerShown: false}}
-       
-        
+        options={{ headerTitle: '', headerShown: false }}
+
+
       />
 
       <Stack.Screen
@@ -71,12 +72,17 @@ function RootStack() {
       <Stack.Screen
         name="LoginForm"
         component={LoginForm}
-        options={{ headerTitle: "Sign-in/Sign-up"}}
+        options={{ headerTitle: "Sign-in/Sign-up" }}
       />
       <Stack.Screen
         name="AdminDashboardAdd"
         component={AdminDashboardAdd}
         options={{ headerTitle: 'Admin Dashboard Add' }}
+      />
+      <Stack.Screen
+        name="ResetPassword"
+        component={ResetPassword}
+        options={{ headerTitle: 'Reset Password' }}
       />
       <Stack.Screen
         name="AdminDashboardAddDeleteEdit"
@@ -101,12 +107,12 @@ function RootStack() {
       <Stack.Screen
         name="AdminDashboardReportView"
         component={AdminDashboardReportView}
-        options={{ headerTitle: 'Admin Dashboard Report View' }}
+        options={{ headerTitle: 'Admin Dashboard Report' }}
       />
       <Stack.Screen
         name="AdminDashboardReportWeek"
         component={AdminDashboardReportWeek}
-        options={{ headerTitle: 'Admin Dashboard Report Week' }}
+        options={{ headerTitle: 'Admin Dashboard Report' }}
       />
       <Stack.Screen
         name="AdminDashboardTask"
@@ -128,7 +134,7 @@ function RootStack() {
         component={AdminDashboardAddView}
         options={{ headerTitle: 'Admin Dashboard Add View' }}
       />
-      
+
     </Stack.Navigator>
   );
 }
