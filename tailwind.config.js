@@ -9,7 +9,7 @@ module.exports = {
         customGreen: '#7ddd7d', // Add your custom color here
       },
       boxShadow: {
-        'custom-black': '0 3px 9px rgba(0, 0, 255, 0.5)', // Button custom shadow color
+        'custom-black': '0 3px 10px rgba(0, 0, 255, 0.5)', // Button custom shadow color
         'custom2-black': '0 0 3px rgba(0, 0, 255, 0.5)' // Overall custom shadow color
       },
     },

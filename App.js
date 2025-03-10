@@ -31,12 +31,12 @@ const Drawer = createDrawerNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="AdminDashboardReportWeek"
+      initialRouteName="LoginForm"
       screenOptions={({ navigation }) => ({
         headerStyle: {
           backgroundColor: "#7ddd7d",
         },
-        headerTitleStyle: { fontSize: 20, fontWeight: '900', color: "white", },
+        headerTitleStyle: { fontSize: 17, fontWeight: '900', color: "white", },
         headerTitleAlign: "center",
         headerLeft: () => (
           <AntDesign
@@ -60,14 +60,12 @@ function RootStack() {
         name="Home"
         component={Home}
         options={{ headerTitle: '', headerShown: false }}
-
-
       />
 
       <Stack.Screen
         name="AdminDashboardAction"
         component={AdminDashboardAction}
-        options={{ headerTitle: "" }}
+        options={{ headerTitle: "Admin Dashboard Actions" }}
       />
       <Stack.Screen
         name="LoginForm"

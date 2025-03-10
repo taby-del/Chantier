@@ -34,7 +34,7 @@ function LoginForm() {
 
   return (
     <View className="flex-1 bg-customGreen justify-center items-center">
-      <View className="bg-white  rounded-3xl shadow-custom-black p-6 w-80">
+      <View className="bg-white  rounded-3xl shadow-custom-black p-6 max-w-fit">
         {isLogin ? (
           <Formik
             initialValues={{ email: '', password: '' }}
@@ -80,8 +80,7 @@ function LoginForm() {
               </View>
             )}
           </Formik>
-        ) : (
-          <ScrollView>
+        ) : (    
             <Formik
               initialValues={{ fullName: '', email: '', password: '' }}
               validationSchema={registrationValidationSchema}
@@ -131,9 +130,6 @@ function LoginForm() {
                 </View>
               )}
             </Formik>
-
-          </ScrollView>
-
         )}
 
       </View>
